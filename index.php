@@ -7,6 +7,7 @@
     <meta name="keywords" content="VueJS, bootstrap, personal growth">
     <meta name="author" content="Peter Vreča">
     <link rel="icon" href="img/favicon-compass.ico">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <!-- Vue.js 2.0 -->
     <script src="https://unpkg.com/vue@2.2.4"></script>
     <!-- Bootstrap -->
@@ -21,7 +22,7 @@
                 
                         <!-- HEADER -->
 
-                <div class="jumbotron text-center" style="background:#46a35d;color:white;">
+                <div class="jumbotron text-center" id="green" >
                 <i class="fa fa-compass fa-5x" aria-hidden="true"></i>
                 <h1>MY COMPASS</h1>
                 <p>Application for choosing your growth path (to glory).</p>
@@ -33,39 +34,48 @@
                          <!-- MAIN CONTENT -->
                  
                  <!-- ACTIVE STEPS BLOCK -->
-                 <div class="jumbotron text-center col-xs-12 col-sm-12" style="background:white;color:#46a35d;border:5px solid #46a35d">
+                 <div class="jumbotron text-center col-xs-12 col-sm-12" id="white">
                     <i class="fa fa-compass fa-3x" aria-hidden="true"></i>
                     <h2>ACTIVE STEPS</h2><br> <!-- read active from the database -->
                 </div>
                 <!-- END OF ACTIVE STEPS BLOCK -->
 
-                <div class="col-xs-6 col-sm-3" style="background:#46a35d;color:white;">
+                <div class="col-xs-6 col-sm-3" id="green">
                     <h2>Learning goals</h2><br>
                     <input type="text" id="l-goal-input" v-model="message">
+                    <button type="button" id="goalButton">Add a new goal.</button>
                     <p>List your learning goals.</p><br>
                     <ul>
                         <li v-for="goal in goals" v-text="goal"></li>
                     </ul>
                 </div>
-                <div class="col-xs-6 col-sm-3" style="background-color:gray;color:white;">
+                <div class="col-xs-6 col-sm-3" id="gray">
                     <h2>Projects</h2><br>
                     <input type="text" id="project-input" v-model="message">
+                    <button type="button" id="projectButton">Add a new project.</button>
                     <p>List your projects.</p><br>
+                        
+                        <?php 
+                            include ('php/retrieve.php');
+                        ?>
+
                 </div>
                 <div class="clearfix visible-xs"></div>
-                <div class="col-xs-6 col-sm-3" style="background:#46a35d;color:white;">
+                <div class="col-xs-6 col-sm-3" id="green">
                     <h2>Habits</h2><br>
                     <input type="text" id="habit-input" v-model="message">
+                    <button type="button" id="habitButton">Add a new habit.</button>
                     <p>List your habits.</p><br>
                 </div>
-                <div class="col-xs-6 col-sm-3" style="background-color:gray;color:white;">
+                <div class="col-xs-6 col-sm-3" id="gray">
                     <h2>Fears</h2><br>
                     <input type="text" id="fear-input" v-model="message">
+                    <button type="button" id="fearButton">Add a new fear.</button>
                     <p>List your fears.</p><br>
                 </div>
 
                 <!-- PAST STEPS BLOCK -->
-                <div class="jumbotron text-center col-xs-12 col-sm-12" style="background:white;color:#46a35d;border:5px solid #46a35d; margin-top:30px; ">
+                <div class="jumbotron text-center col-xs-12 col-sm-12" id="white" style="margin-top:30px;">
                     <i class="fa fa-compass fa-3x" aria-hidden="true"></i>
                     <h2>PAST STEPS</h2><br> <!-- read completed from the database -->
                 </div>

@@ -1,0 +1,21 @@
+#green {
+    background:#46a35d;
+    color:white;
+}
+
+#white {
+    background:white;
+    color:#46a35d;
+    border:5px solid #46a35d;
+}
+
+#gray {
+    background-color:gray;
+    color:white;
+}
+
+#green button { color:#000;}
+#gray button { color:#000;}
+
+#green input { color:#000;}
+#gray input { color:#000;}

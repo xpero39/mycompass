@@ -5,4 +5,5 @@ var app = new Vue ({
                     goals: ['Learn VueJS','Learn Algorithms','Learn best coding practices'],
                 },
                 
+                
             })
