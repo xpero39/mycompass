@@ -18,7 +18,7 @@
 </head>
     <body>
         <div class="container">
-            <div  class="row" id="app">
+            <div class="row" id="app">
                 
                         <!-- HEADER -->
 
@@ -31,7 +31,9 @@
 
                          <!-- END OF HEADER -->
 
+
                          <!-- MAIN CONTENT -->
+                       
                  
                  <!-- ACTIVE STEPS BLOCK -->
                  <div class="jumbotron text-center col-xs-12 col-sm-12" id="white">
@@ -40,39 +42,67 @@
                 </div>
                 <!-- END OF ACTIVE STEPS BLOCK -->
 
+
                 <div class="col-xs-6 col-sm-3" id="green">
                     <h2>Learning goals</h2><br>
-                    <input type="text" id="l-goal-input" v-model="message">
+                    <input type="text" id="goal-input" v-model="gmessage">
                     <button type="button" id="goalButton">Add a new goal.</button>
                     <p>List your learning goals.</p><br>
-                    <ul>
-                        <li v-for="goal in goals" v-text="goal"></li>
-                    </ul>
+                        <?php 
+                            include ('php/retrieve.php');
+                            echo "<ul>";
+                            while($row = $goals->fetch_assoc()){
+                             echo "<li>" . $row['g_title'] . " </li>";
+                            }
+                            echo "</ul>";
+                        ?>
                 </div>
                 <div class="col-xs-6 col-sm-3" id="gray">
                     <h2>Projects</h2><br>
-                    <input type="text" id="project-input" v-model="message">
+                    <input type="text" id="project-input" v-model="pmessage">
                     <button type="button" id="projectButton">Add a new project.</button>
                     <p>List your projects.</p><br>
                         
                         <?php 
                             include ('php/retrieve.php');
+                            echo "<ul>";
+                            while($row = $projects->fetch_assoc()){
+                             echo "<li>" . $row['p_title'] . " </li>";
+                            }
+                            echo "</ul>";
                         ?>
 
                 </div>
                 <div class="clearfix visible-xs"></div>
                 <div class="col-xs-6 col-sm-3" id="green">
                     <h2>Habits</h2><br>
-                    <input type="text" id="habit-input" v-model="message">
+                    <input type="text" id="habit-input" v-model="hmessage">
                     <button type="button" id="habitButton">Add a new habit.</button>
                     <p>List your habits.</p><br>
+                        <?php 
+                                include ('php/retrieve.php');
+                                echo "<ul>";
+                                while($row = $habits->fetch_assoc()){
+                                    echo "<li>" . $row['h_title'] . " </li>";
+                                }
+                                echo "</ul>";
+                        ?>
                 </div>
                 <div class="col-xs-6 col-sm-3" id="gray">
                     <h2>Fears</h2><br>
-                    <input type="text" id="fear-input" v-model="message">
+                    <input type="text" id="fear-input" v-model="fmessage">
                     <button type="button" id="fearButton">Add a new fear.</button>
                     <p>List your fears.</p><br>
+                        <?php 
+                                include ('php/retrieve.php');
+                                echo "<ul>";
+                                while($row = $fears->fetch_assoc()){
+                                    echo "<li>" . $row['f_title'] . " </li>";
+                                }
+                                echo "</ul>";
+                        ?>
                 </div>
+
 
                 <!-- PAST STEPS BLOCK -->
                 <div class="jumbotron text-center col-xs-12 col-sm-12" id="white" style="margin-top:30px;">
@@ -100,6 +130,7 @@
 
                          <!-- END OF FOOTER -->
 
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         <script src="js/app.js"></script>
     </body>
 </html>

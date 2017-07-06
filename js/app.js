@@ -1,9 +1,15 @@
 var app = new Vue ({
                 el: '#app', 
                 data: { 
-                    message:'New path',
-                    goals: ['Learn VueJS','Learn Algorithms','Learn best coding practices'],
+                    gmessage:'New goal',
+                    pmessage:'New project',
+                    hmessage:'New habit',
+                    fmessage:'New fear',
+                    goals: ['Learn VueJS','Learn Algorithms','Learn best coding practices', 'Learn German'],
+                    projects: [],
+                    habits: [],
+                    fears: [],
                 },
                 
-                
+               
             })
