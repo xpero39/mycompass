@@ -49,6 +49,7 @@
                     <button type="button" id="goalButton">Add a new goal.</button>
                     <p>List your learning goals.</p><br>
                         <?php 
+                            $data = "goal"; //variable in global scope!
                             include ('php/retrieve.php');
                             echo "<ul>";
                             while($row = $goals->fetch_assoc()){
@@ -64,6 +65,7 @@
                     <p>List your projects.</p><br>
                         
                         <?php 
+                            $data = "project"; //variable in global scope!
                             include ('php/retrieve.php');
                             echo "<ul>";
                             while($row = $projects->fetch_assoc()){
@@ -80,12 +82,13 @@
                     <button type="button" id="habitButton">Add a new habit.</button>
                     <p>List your habits.</p><br>
                         <?php 
-                                include ('php/retrieve.php');
-                                echo "<ul>";
-                                while($row = $habits->fetch_assoc()){
-                                    echo "<li>" . $row['h_title'] . " </li>";
-                                }
-                                echo "</ul>";
+                            $data = "habit"; //variable in global scope!
+                            include ('php/retrieve.php');
+                            echo "<ul>";
+                            while($row = $habits->fetch_assoc()){
+                                echo "<li>" . $row['h_title'] . " </li>";
+                            }
+                            echo "</ul>";
                         ?>
                 </div>
                 <div class="col-xs-6 col-sm-3" id="gray">
@@ -94,12 +97,13 @@
                     <button type="button" id="fearButton">Add a new fear.</button>
                     <p>List your fears.</p><br>
                         <?php 
-                                include ('php/retrieve.php');
-                                echo "<ul>";
-                                while($row = $fears->fetch_assoc()){
-                                    echo "<li>" . $row['f_title'] . " </li>";
-                                }
-                                echo "</ul>";
+                            $data = "fear"; //variable in global scope!
+                            include ('php/retrieve.php');
+                            echo "<ul>";
+                            while($row = $fears->fetch_assoc()){
+                                echo "<li>" . $row['f_title'] . " </li>";
+                            }
+                            echo "</ul>";
                         ?>
                 </div>
 
@@ -121,7 +125,7 @@
                 <footer class="footer text-center"  >
                 <div class="container">
                     <br>
-                    <p class="text-muted">Made by Peter Vreča <i class="fa fa-copyright" aria-hidden="true"></i> in 2017 using VueJS, Bootstrap.<br> Follow me on:   <a href="https://www.linkedin.com/in/peter-vre%C4%8Da-613626114/"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                    <p class="text-muted">Made by Peter Vreča <i class="fa fa-copyright" aria-hidden="true"></i> in 2017 using PHP, VueJS, Bootstrap.<br> Follow me on:   <a href="https://www.linkedin.com/in/peter-vre%C4%8Da-613626114/"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
                     <a href="https://github.com/xpero39/"><i class="fa fa-github" aria-hidden="true"></i></a>
                     <a href="https://www.freecodecamp.com/xpero39"><i class="fa fa-free-code-camp" aria-hidden="true"></i></a>
                     <a href="https://twitter.com/xpero39"><i class="fa fa-twitter" aria-hidden="true"></i></a></p>
