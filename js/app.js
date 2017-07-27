@@ -11,5 +11,8 @@ var app = new Vue ({
                     fears: [],
                 },
                 
-               
-            })
+                methods: {
+                    
+
+                }
+ })

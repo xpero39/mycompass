@@ -45,8 +45,10 @@
 
                 <div class="col-xs-6 col-sm-3" id="green">
                     <h2>Learning goals</h2><br>
-                    <input type="text" id="goal-input" v-model="gmessage">
-                    <button type="button" id="goalButton">Add a new goal.</button>
+                    <form action="insert.php" method="post">
+                    <input type="text" id="goalinput" name="goal" v-model="gmessage">
+                    <button type="submit" id="goalButton" >Add a new goal.</button>
+                    </form>
                     <p>List your learning goals.</p><br>
                         <?php 
                             $data = "goal"; //variable in global scope!
@@ -60,7 +62,7 @@
                 </div>
                 <div class="col-xs-6 col-sm-3" id="gray">
                     <h2>Projects</h2><br>
-                    <input type="text" id="project-input" v-model="pmessage">
+                    <input type="text" id="projectinput" v-model="pmessage">
                     <button type="button" id="projectButton">Add a new project.</button>
                     <p>List your projects.</p><br>
                         
@@ -78,7 +80,7 @@
                 <div class="clearfix visible-xs"></div>
                 <div class="col-xs-6 col-sm-3" id="green">
                     <h2>Habits</h2><br>
-                    <input type="text" id="habit-input" v-model="hmessage">
+                    <input type="text" id="habitinput" v-model="hmessage">
                     <button type="button" id="habitButton">Add a new habit.</button>
                     <p>List your habits.</p><br>
                         <?php 
@@ -93,7 +95,7 @@
                 </div>
                 <div class="col-xs-6 col-sm-3" id="gray">
                     <h2>Fears</h2><br>
-                    <input type="text" id="fear-input" v-model="fmessage">
+                    <input type="text" id="fearinput" v-model="fmessage">
                     <button type="button" id="fearButton">Add a new fear.</button>
                     <p>List your fears.</p><br>
                         <?php 
@@ -125,7 +127,7 @@
                 <footer class="footer text-center"  >
                 <div class="container">
                     <br>
-                    <p class="text-muted">Made by Peter Vreča <i class="fa fa-copyright" aria-hidden="true"></i> in 2017 using PHP, VueJS, Bootstrap.<br> Follow me on:   <a href="https://www.linkedin.com/in/peter-vre%C4%8Da-613626114/"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                    <p class="text-muted">Made by Peter Vreča <i class="fa fa-copyright" aria-hidden="true"></i> in 2017 using PHP, VueJS and Bootstrap.<br> Follow me on:   <a href="https://www.linkedin.com/in/peter-vre%C4%8Da-613626114/"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
                     <a href="https://github.com/xpero39/"><i class="fa fa-github" aria-hidden="true"></i></a>
                     <a href="https://www.freecodecamp.com/xpero39"><i class="fa fa-free-code-camp" aria-hidden="true"></i></a>
                     <a href="https://twitter.com/xpero39"><i class="fa fa-twitter" aria-hidden="true"></i></a></p>
