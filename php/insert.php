@@ -2,6 +2,7 @@
 //INSERT VALUES INTO THE DATABASE
 include ('db.php');
 
+// GET INFO ON INSERT VALUE AND WHCIH TABLE/SECTION
 //$data = $_POST[];
 $data_value = $_POST["goal"];
 
