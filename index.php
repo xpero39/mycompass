@@ -47,7 +47,7 @@
                     <h2>Learning goals</h2><br>
                     <!--<form action="insert.php" method="post">-->
                     <input type="text" id="goalinput" name="goal" v-model="gmessage">
-                    <button type="submit" id="goalButton" v-on:click="insert(goal)">Add a new goal.</button>
+                    <button type="submit" id="goalButton" v-on:click="insert('goal')">Add a new goal.</button>
                     </form>
                     <p>List your learning goals.</p><br>
                         <?php 
@@ -63,7 +63,7 @@
                 <div class="col-xs-6 col-sm-3" id="gray">
                     <h2>Projects</h2><br>
                     <input type="text" id="projectinput" v-model="pmessage">
-                    <button type="button" id="projectButton" v-on:click="insert(project)">Add a new project.</button>
+                    <button type="button" id="projectButton" v-on:click="insert('project')">Add a new project.</button>
                     <p>List your projects.</p><br>
                         
                         <?php 
@@ -81,7 +81,7 @@
                 <div class="col-xs-6 col-sm-3" id="green">
                     <h2>Habits</h2><br>
                     <input type="text" id="habitinput" v-model="hmessage">
-                    <button type="button" id="habitButton" v-on:click="insert(habit)">Add a new habit.</button>
+                    <button type="button" id="habitButton" v-on:click="insert('habit')">Add a new habit.</button>
                     <p>List your habits.</p><br>
                         <?php 
                             $data = "habit"; //variable in global scope!
@@ -96,7 +96,7 @@
                 <div class="col-xs-6 col-sm-3" id="gray">
                     <h2>Fears</h2><br>
                     <input type="text" id="fearinput" v-model="fmessage">
-                    <button type="button" id="fearButton" v-on:click="insert(fear)">Add a new fear.</button>
+                    <button type="button" id="fearButton" v-on:click="insert('fear')">Add a new fear.</button>
                     <p>List your fears.</p><br>
                         <?php 
                             $data = "fear"; //variable in global scope!

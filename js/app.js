@@ -16,13 +16,12 @@ var app = new Vue ({
                     insert: function(section) {
                         switch (section) {
                             case 'goal':
-                                //axios post
-                                axios({
+                                axios({ //axios post
                                     method: 'post',
                                     url: 'insert.php',
                                     data: {
                                         section: section,
-                                        data: gmessage,
+                                        data: this.gmessage,
                                     }
                                     .then(function (response) {
                                         console.log(response);
@@ -33,13 +32,12 @@ var app = new Vue ({
                                 });
                                 break;
                             case 'project':
-                                //axios post
                                 axios({
                                     method: 'post',
                                     url: 'insert.php',
                                     data: {
                                         section: section,
-                                        data: pmessage,
+                                        data: this.pmessage,
                                     }
                                     .then(function (response) {
                                         console.log(response);
@@ -50,13 +48,12 @@ var app = new Vue ({
                                 });
                                 break;
                             case 'habit':
-                                //axios post
                                 axios({
                                     method: 'post',
                                     url: 'insert.php',
                                     data: {
                                         section: section,
-                                        data: hmessage,
+                                        data: this.hmessage,
                                     }
                                     .then(function (response) {
                                         console.log(response);
@@ -67,13 +64,12 @@ var app = new Vue ({
                                 });
                                 break;
                             case 'fear':
-                                //axios post
                                 axios({
                                     method: 'post',
                                     url: 'insert.php',
                                     data: {
                                         section: section,
-                                        data: fmessage,
+                                        data: this.fmessage,
                                     }
                                     .then(function (response) {
                                         console.log(response);
@@ -83,8 +79,7 @@ var app = new Vue ({
                                     })
                                 });
                                 break;
-                            default:
-                                // No default action
+                            default: // No default action
                                 break;
                         }
                     },
