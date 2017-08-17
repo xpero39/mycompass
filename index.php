@@ -26,7 +26,7 @@
                 <i class="fa fa-compass fa-5x" aria-hidden="true"></i>
                 <h1>MY COMPASS</h1>
                 <p>Application for choosing your growth path (to glory).</p>
-                <p style="font-size: 11pt;">Allign your learning goals with projects, change habits and challange your fears.</p>
+                <p style="font-size: 11pt;">Align your learning goals with projects, change habits and challenge your fears.</p>
                 </div>
 
                          <!-- END OF HEADER -->
