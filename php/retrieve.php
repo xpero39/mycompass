@@ -2,7 +2,6 @@
 //READ FROM THE DATABASE
 include ('db.php');
 
-
 switch($data){
 	case "goal":
 		$sql = "SELECT g_title FROM goals";

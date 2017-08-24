@@ -10,7 +10,7 @@ echo $data_value;
 
 /* switch($data){
 	case "goal":
-		$sql = "SELECT g_title FROM goals";
+		$sql = "INSERT INTO 'goals' ('g_title') VALUES ('$goals')"; // Get access to goal VueJS value here, value plus section needed
 		$goals = $conn->query($sql) or trigger_error($conn->error. " [$sql]");
 		break;
 	case "project":
