@@ -3,14 +3,14 @@
 include ('db.php');
 
 // GET INFO ON INSERT VALUE AND WHCIH TABLE/SECTION
-//$data = $_POST[];
+//$data = $_POST[]; //section data
 $data_value = $_POST["goal"];
 
 echo $data_value;
 
-/* switch($data){
+ switch($data){
 	case "goal":
-		$sql = "INSERT INTO 'goals' ('g_title') VALUES ('$goals')"; // Get access to goal VueJS value here, value plus section needed
+		$sql = "INSERT INTO 'goals' ('g_title') VALUES ('$data_value')"; // Get access to goal VueJS value here, value plus section needed
 		$goals = $conn->query($sql) or trigger_error($conn->error. " [$sql]");
 		break;
 	case "project":
@@ -27,8 +27,8 @@ echo $data_value;
 		break;
 	default:
 		echo "Something went wrong, data not retrieved.";
-} */
-// 
+} 
+
 $conn->close();
 // INSERT INTO `projects` (`p_id`, `p_title`, `p_desc`, `p_time`) VALUES (NULL, 'Family Recipe', 'Mobile/Online, React/Vue', '21 days');
 ?>

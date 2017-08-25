@@ -19,6 +19,14 @@ switch($data){
 		$sql = "SELECT f_title FROM fears";
 		$fears = $conn->query($sql) or trigger_error($conn->error. " [$sql]");
 		break;
+	case "active":
+		$sql = "SELECT f_title FROM fears";
+		$active = $conn->query($sql) or trigger_error($conn->error. " [$sql]");
+		break;
+	case "done":
+		$sql = "SELECT f_title FROM fears";
+		$done = $conn->query($sql) or trigger_error($conn->error. " [$sql]");
+		break;
 	default:
 		echo "Something went wrong, data not retrieved.";
 }

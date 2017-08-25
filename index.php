@@ -39,6 +39,15 @@
                  <div class="jumbotron text-center col-xs-12 col-sm-12" id="white">
                     <i class="fa fa-compass fa-3x" aria-hidden="true"></i>
                     <h2>ACTIVE STEPS</h2><br> <!-- read active from the database -->
+                    <?php 
+                            $data = "active"; //variable in global scope!
+                            include ('php/retrieve.php');
+                            echo "<ul>";
+                            while($row = $active->fetch_assoc()){
+                             echo "<li style='list-style:none inside;'>" . $row['g_title'] . "<input type=\"checkbox\" id=\"checkbox\" style=\"margin-left:10px;\"></li>";
+                            }
+                            echo "</ul>";
+                        ?>
                 </div>
                 <!-- END OF ACTIVE STEPS BLOCK -->
 
@@ -114,6 +123,15 @@
                 <div class="jumbotron text-center col-xs-12 col-sm-12" id="white" style="margin-top:30px;">
                     <i class="fa fa-compass fa-3x" aria-hidden="true"></i>
                     <h2>PAST STEPS</h2><br> <!-- read completed from the database -->
+                        <?php 
+                            $data = "done"; //variable in global scope!
+                            include ('php/retrieve.php');
+                            echo "<ul>";
+                            while($row = $done->fetch_assoc()){
+                             echo "<li style='list-style:none inside;'>" . $row['g_title'] . "<input type=\"checkbox\" id=\"checkbox\" style=\"margin-left:10px;\"></li>";
+                            }
+                            echo "</ul>";
+                        ?>
                 </div>
                 <!-- END OF PAST STEPS BLOCK -->
 
