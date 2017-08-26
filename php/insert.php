@@ -14,15 +14,15 @@ echo $data_value;
 		$goals = $conn->query($sql) or trigger_error($conn->error. " [$sql]");
 		break;
 	case "project":
-		$sql = "SELECT p_title FROM projects";
+		$sql = "INSERT INTO 'projects' ('p_title') VALUES ('$data_value')"; 
 		$projects = $conn->query($sql) or trigger_error($conn->error. " [$sql]");	
 		break;
 	case "habit":
-		$sql = "SELECT h_title FROM habits";
+		$sql = "INSERT INTO 'habits' ('h_title') VALUES ('$data_value')"; 
 		$habits = $conn->query($sql) or trigger_error($conn->error. " [$sql]");
 		break;
 	case "fear":
-		$sql = "SELECT f_title FROM fears";
+		$sql = "INSERT INTO 'fears' ('f_title') VALUES ('$data_value')"; 
 		$fears = $conn->query($sql) or trigger_error($conn->error. " [$sql]");
 		break;
 	default:
