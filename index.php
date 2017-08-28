@@ -35,10 +35,10 @@
                          <!-- MAIN CONTENT -->
                        
                  
-                 <!-- ACTIVE STEPS BLOCK -->
+                    <!-- ACTIVE STEPS BLOCK -->
                  <div class="jumbotron text-center col-xs-12 col-sm-12" id="white">
                     <i class="fa fa-compass fa-3x" aria-hidden="true"></i>
-                    <h2>ACTIVE STEPS</h2><br> <!-- read active from the database -->
+                    <h2>ACTIVE STEPS</h2><br> 
                     <?php 
                             $data = "active"; //variable in global scope!
                             include ('php/retrieve.php');
@@ -49,7 +49,7 @@
                             echo "</ul>";
                         ?>
                 </div>
-                <!-- END OF ACTIVE STEPS BLOCK -->
+                    <!-- END OF ACTIVE STEPS BLOCK -->
 
 
                 <div class="col-xs-6 col-sm-3" id="green">
@@ -64,7 +64,7 @@
                             include ('php/retrieve.php');
                             echo "<ul>";
                             while($row = $goals->fetch_assoc()){
-                             echo "<li style='list-style:none inside;'>" . $row['title'] . "<input type=\"checkbox\" id=\"checkbox\" style=\"margin-left:10px;\"></li>";
+                             echo "<li style='list-style:none inside;'>" . $row['title'] . "<input type=\"button\" value='Activate' v-on:click='activate()' style=\"margin-left:10px;\"></li>";
                             }
                             echo "</ul>";
                         ?>
@@ -80,7 +80,7 @@
                             include ('php/retrieve.php');
                             echo "<ul>";
                             while($row = $projects->fetch_assoc()){
-                             echo "<li style='list-style:none inside;'>" . $row['title'] . "<input type=\"checkbox\" id=\"checkbox\" style=\"margin-left:10px;\"></li>";
+                             echo "<li style='list-style:none inside;'>" . $row['title'] . "<input type=\"button\" value='Activate' v-on:click='activate()' style=\"margin-left:10px;\"></li>";
                             }
                             echo "</ul>";
                         ?>
@@ -97,7 +97,7 @@
                             include ('php/retrieve.php');
                             echo "<ul>";
                             while($row = $habits->fetch_assoc()){
-                                echo "<li style='list-style:none inside;'>" . $row['title'] . "<input type=\"checkbox\" id=\"checkbox\" style=\"margin-left:10px;\"></li>";
+                                echo "<li style='list-style:none inside;'>" . $row['title'] . "<input type=\"button\" value='Activate' v-on:click='activate()' style=\"margin-left:10px;\"></li>";
                             }
                             echo "</ul>";
                         ?>
@@ -112,17 +112,17 @@
                             include ('php/retrieve.php');
                             echo "<ul>";
                             while($row = $fears->fetch_assoc()){
-                                echo "<li style='list-style:none inside;'>" . $row['title'] . "<input type=\"checkbox\" id=\"checkbox\" style=\"margin-left:10px;\"></li>";
+                                echo "<li style='list-style:none inside;'>" . $row['title'] . "<input type=\"button\" value='Activate' v-on:click='activate()' style=\"margin-left:10px;\"></li>";
                             }  
                             echo "</ul>";
                         ?>
                 </div>
 
 
-                <!-- PAST STEPS BLOCK -->
+                    <!-- PAST STEPS BLOCK -->
                 <div class="jumbotron text-center col-xs-12 col-sm-12" id="white" style="margin-top:30px;">
                     <i class="fa fa-compass fa-3x" aria-hidden="true"></i>
-                    <h2>PAST STEPS</h2><br> <!-- read completed from the database -->
+                    <h2>PAST STEPS</h2><br> 
                         <?php 
                             $data = "done"; //variable in global scope!
                             include ('php/retrieve.php');
@@ -133,7 +133,7 @@
                             echo "</ul>";
                         ?>
                 </div>
-                <!-- END OF PAST STEPS BLOCK -->
+                    <!-- END OF PAST STEPS BLOCK -->
 
                          <!-- END OF MAIN CONTENT -->
 

@@ -10,6 +10,10 @@ var app = new Vue ({
                     projects: [],
                     habits: [],
                     fears: [], */
+
+                    activate: function() {
+                        alert("It's active now.");
+                    },
                 },
                 
                 methods: {
