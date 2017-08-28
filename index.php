@@ -44,7 +44,7 @@
                             include ('php/retrieve.php');
                             echo "<ul>";
                             while($row = $active->fetch_assoc()){
-                             echo "<li style='list-style:none inside;'>" . $row['g_title'] . "<input type=\"checkbox\" id=\"checkbox\" style=\"margin-left:10px;\"></li>";
+                             echo "<li style='list-style:none inside;'>" . $row['title'] . "<input type=\"checkbox\" id=\"checkbox\" style=\"margin-left:10px;\"></li>";
                             }
                             echo "</ul>";
                         ?>
@@ -64,7 +64,7 @@
                             include ('php/retrieve.php');
                             echo "<ul>";
                             while($row = $goals->fetch_assoc()){
-                             echo "<li style='list-style:none inside;'>" . $row['g_title'] . "<input type=\"checkbox\" id=\"checkbox\" style=\"margin-left:10px;\"></li>";
+                             echo "<li style='list-style:none inside;'>" . $row['title'] . "<input type=\"checkbox\" id=\"checkbox\" style=\"margin-left:10px;\"></li>";
                             }
                             echo "</ul>";
                         ?>
@@ -80,7 +80,7 @@
                             include ('php/retrieve.php');
                             echo "<ul>";
                             while($row = $projects->fetch_assoc()){
-                             echo "<li style='list-style:none inside;'>" . $row['p_title'] . "<input type=\"checkbox\" id=\"checkbox\" style=\"margin-left:10px;\"></li>";
+                             echo "<li style='list-style:none inside;'>" . $row['title'] . "<input type=\"checkbox\" id=\"checkbox\" style=\"margin-left:10px;\"></li>";
                             }
                             echo "</ul>";
                         ?>
@@ -97,7 +97,7 @@
                             include ('php/retrieve.php');
                             echo "<ul>";
                             while($row = $habits->fetch_assoc()){
-                                echo "<li style='list-style:none inside;'>" . $row['h_title'] . "<input type=\"checkbox\" id=\"checkbox\" style=\"margin-left:10px;\"></li>";
+                                echo "<li style='list-style:none inside;'>" . $row['title'] . "<input type=\"checkbox\" id=\"checkbox\" style=\"margin-left:10px;\"></li>";
                             }
                             echo "</ul>";
                         ?>
@@ -112,7 +112,7 @@
                             include ('php/retrieve.php');
                             echo "<ul>";
                             while($row = $fears->fetch_assoc()){
-                                echo "<li style='list-style:none inside;'>" . $row['f_title'] . "<input type=\"checkbox\" id=\"checkbox\" style=\"margin-left:10px;\"></li>";
+                                echo "<li style='list-style:none inside;'>" . $row['title'] . "<input type=\"checkbox\" id=\"checkbox\" style=\"margin-left:10px;\"></li>";
                             }  
                             echo "</ul>";
                         ?>
@@ -128,7 +128,7 @@
                             include ('php/retrieve.php');
                             echo "<ul>";
                             while($row = $done->fetch_assoc()){
-                             echo "<li style='list-style:none inside;'>" . $row['g_title'] . "<input type=\"checkbox\" id=\"checkbox\" style=\"margin-left:10px;\"></li>";
+                             echo "<li style='list-style:none inside;'>" . $row['title'] . "<input type=\"checkbox\" id=\"checkbox\" style=\"margin-left:10px;\"></li>";
                             }
                             echo "</ul>";
                         ?>

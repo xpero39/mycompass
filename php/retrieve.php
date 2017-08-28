@@ -4,27 +4,27 @@ include ('db.php');
 
 switch($data){
 	case "goal":
-		$sql = "SELECT g_title FROM goals";
+		$sql = "SELECT title FROM goals";
 		$goals = $conn->query($sql) or trigger_error($conn->error. " [$sql]");
 		break;
 	case "project":
-		$sql = "SELECT p_title FROM projects";
+		$sql = "SELECT title FROM projects";
 		$projects = $conn->query($sql) or trigger_error($conn->error. " [$sql]");	
 		break;
 	case "habit":
-		$sql = "SELECT h_title FROM habits";
+		$sql = "SELECT title FROM habits";
 		$habits = $conn->query($sql) or trigger_error($conn->error. " [$sql]");
 		break;
 	case "fear":
-		$sql = "SELECT f_title FROM fears";
+		$sql = "SELECT title FROM fears";
 		$fears = $conn->query($sql) or trigger_error($conn->error. " [$sql]");
 		break;
 	case "active":
-		$sql = "SELECT f_title, g_title, h_title, p_title FROM fears, habits, projects, goals WHERE 'active = 1'"; // CHANGE TO JOIN
+		$sql = "SELECT title FROM fears WHERE active='1' UNION SELECT title FROM goals WHERE active='1'	UNION SELECT title FROM projects WHERE active='1' UNION SELECT title FROM habits WHERE active='1'"; 
 		$active = $conn->query($sql) or trigger_error($conn->error. " [$sql]");
 		break;
 	case "done":
-		$sql = "SELECT f_title, g_title, h_title, p_title FROM fears, habits, projects, goals WHERE 'done = 1'"; // CHANGE TO JOIN
+		$sql = "SELECT title FROM fears WHERE done='1' UNION SELECT title FROM goals WHERE done='1'	UNION SELECT title FROM projects WHERE done='1' UNION SELECT title FROM habits WHERE done='1'"; 
 		$done = $conn->query($sql) or trigger_error($conn->error. " [$sql]");
 		break;
 	default:
