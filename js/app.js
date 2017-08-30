@@ -11,12 +11,14 @@ var app = new Vue ({
                     habits: [],
                     fears: [], */
 
-                    activate: function() {
-                        alert("It's active now.");
-                    },
                 },
                 
                 methods: {
+                    activate: function() {
+                        alert("It's active now.");
+                    },
+
+
                     insert: function(section) {
                         switch (section) {
                             case 'goal':
