@@ -22,51 +22,39 @@ var app = new Vue ({
                     insert: function(section) {
                         switch (section) {
                             case 'goal':
-                                axios({ //axios post
-                                    method: 'post',
-                                    url: 'insert.php',
-                                    data: {
-                                        section: section,
-                                        data: this.gmessage,
-                                    }
-                                    .then(function (response) {
-                                        console.log(response);
-                                    })
-                                    .catch(function (error) {
-                                        console.log(error);
-                                    })
+                                axios.post('/php/insert.php', {
+                                    section: section,
+                                    data: gmessage,
+                                })
+                                .then(function (response) {
+                                    console.log(response);
+                                })
+                                .catch(function (error) {
+                                    console.log(error);
                                 });
                                 break;
                             case 'project':
-                                axios({
-                                    method: 'post',
-                                    url: 'insert.php',
-                                    data: {
-                                        section: section,
-                                        data: this.pmessage,
-                                    }
-                                    .then(function (response) {
-                                        console.log(response);
-                                    })
-                                    .catch(function (error) {
-                                        console.log(error);
-                                    })
+                                axios.post('/php/insert.php', {
+                                    section: section,
+                                    data: pmessage,
+                                })
+                                .then(function (response) {
+                                    console.log(response);
+                                })
+                                .catch(function (error) {
+                                    console.log(error);
                                 });
                                 break;
                             case 'habit':
-                                axios({
-                                    method: 'post',
-                                    url: 'insert.php',
-                                    data: {
-                                        section: section,
-                                        data: this.hmessage,
-                                    }
-                                    .then(function (response) {
-                                        console.log(response);
-                                    })
-                                    .catch(function (error) {
-                                        console.log(error);
-                                    })
+                                axios.post('/php/insert.php', {
+                                    section: section,
+                                    data: hmessage,
+                                })
+                                .then(function (response) {
+                                    console.log(response);
+                                })
+                                .catch(function (error) {
+                                    console.log(error);
                                 });
                                 break;
                             case 'fear':

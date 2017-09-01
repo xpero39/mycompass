@@ -8,13 +8,8 @@
     <meta name="author" content="Peter Vreča">
     <link rel="icon" href="img/favicon-compass.ico">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <!-- Vue.js 2.0 -->
-    <script src="https://unpkg.com/vue@2.2.4"></script>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!-- Font Awesome -->
-    <script src="https://use.fontawesome.com/d87f30f392.js"></script>
-
 </head>
     <body>
         <div class="container">
@@ -153,8 +148,12 @@
                 </footer>
 
                          <!-- END OF FOOTER -->
-
+        <!-- Vue.js 2.0 -->
+        <script src="https://unpkg.com/vue@2.2.4"></script>
+         <!-- Axios -->                   
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <!-- Font Awesome -->
+        <script src="https://use.fontawesome.com/d87f30f392.js"></script>
         <script src="js/app.js"></script>
     </body>
 </html>

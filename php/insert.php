@@ -2,7 +2,7 @@
 //INSERT VALUES INTO THE DATABASE
 include ('db.php');
 
-// GET INFO ON INSERT VALUE AND WHCIH TABLE/SECTION
+// GET INFO ON INSERT VALUE AND TABLE/SECTION
 //$data = $_POST[]; //section data
 $data_value = $_POST["goal"];
 
@@ -30,5 +30,4 @@ echo $data_value;
 } 
 
 $conn->close();
-// INSERT INTO `projects` (`p_id`, `p_title`, `p_desc`, `p_time`) VALUES (NULL, 'Family Recipe', 'Mobile/Online, React/Vue', '21 days');
 ?>
