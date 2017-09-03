@@ -5,6 +5,7 @@ include ('db.php');
 // GET INFO ON INSERT VALUE AND TABLE/SECTION
 //$data = $_POST[]; //section data
 $data_value = $_POST["goal"];
+$data= $_POST[''];
 
 echo $data_value;
 
