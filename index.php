@@ -39,7 +39,7 @@
                             include ('php/retrieve.php');
                             echo "<ul>";
                             while($row = $active->fetch_assoc()){
-                             echo "<li style='list-style:none inside;'>" . $row['title'] . "<input type=\"checkbox\" id=\"checkbox\" style=\"margin-left:10px;\"></li>";
+                             echo "<li style='list-style:none inside;'>" . $row['title'] . "<input type=\"checkbox\" id=\"checkbox\" style=\"margin-left:10px;\"><input type=\"button\" value='Deactivate' v-on:click='deactivate()' style=\"margin-left:10px;color:#000;\"></li>";
                             }
                             echo "</ul>";
                         ?>
@@ -123,7 +123,7 @@
                             include ('php/retrieve.php');
                             echo "<ul>";
                             while($row = $done->fetch_assoc()){
-                             echo "<li style='list-style:none inside;'>" . $row['title'] . "<input type=\"checkbox\" id=\"checkbox\" style=\"margin-left:10px;\"></li>";
+                             echo "<li style='list-style:none inside;'>" . $row['title'] . "<input type=\"checkbox\" id=\"checkbox\" style=\"margin-left:10px;\"><input type=\"button\" value='Reactivate' v-on:click='reactivate()' style=\"margin-left:10px;color:#000;\"></li>";
                             }
                             echo "</ul>";
                         ?>

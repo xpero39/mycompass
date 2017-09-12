@@ -15,9 +15,17 @@ var app = new Vue ({
                 
                 methods: {
                     activate: function() {
+                        // Set action to active.
                         alert("It's active now.");
                     },
-
+                    deactivate: function() {
+                        // Deactivate action.
+                        alert("Deactivated.");
+                    },
+                    reactivate: function() {
+                        // Reactivate action.
+                        alert("Reactivated.");
+                    },
 
                     insert: function(section) {
                         switch (section) {
