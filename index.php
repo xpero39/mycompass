@@ -39,7 +39,8 @@
                             include ('php/retrieve.php');
                             echo "<ul>";
                             while($row = $active->fetch_assoc()){
-                             echo "<li style='list-style:none inside;'>" . $row['title'] . "<input type=\"checkbox\" id=\"checkbox\" style=\"margin-left:10px;\"><input type=\"button\" value='Deactivate' v-on:click='deactivate()' style=\"margin-left:10px;color:#000;\"></li>";
+                             echo "<li style='list-style:none inside;'>" . $row['title'] . "<input type=\"checkbox\" id=\"checkbox\" name=\"". $row['title']  . "\" style=\"margin-left:10px;\">
+                                    <input type=\"button\" value='Deactivate' name=\"". $row['title']  . "\" v-on:click='deactivate()' style=\"margin-left:10px;color:#000;\"></li>";
                             }
                             echo "</ul>";
                         ?>
@@ -59,7 +60,7 @@
                             include ('php/retrieve.php');
                             echo "<ul>";
                             while($row = $goals->fetch_assoc()){
-                             echo "<li style='list-style:none inside;'>" . $row['title'] . "<input type=\"button\" value='Activate' v-on:click='activate()' style=\"margin-left:10px;\"></li>";
+                             echo "<li style='list-style:none inside;'>" . $row['title'] . "<input type=\"button\" name=\"". $row['title']  . "\" value='Activate' v-on:click='activate()' style=\"margin-left:10px;\"></li>";
                             }
                             echo "</ul>";
                         ?>
@@ -123,7 +124,8 @@
                             include ('php/retrieve.php');
                             echo "<ul>";
                             while($row = $done->fetch_assoc()){
-                             echo "<li style='list-style:none inside;'>" . $row['title'] . "<input type=\"checkbox\" id=\"checkbox\" style=\"margin-left:10px;\"><input type=\"button\" value='Reactivate' v-on:click='reactivate()' style=\"margin-left:10px;color:#000;\"></li>";
+                             echo "<li style='list-style:none inside;'>" . $row['title'] . "<input type=\"checkbox\" id=\"checkbox\" name=\"". $row['title']  . "\" style=\"margin-left:10px;\">
+                                    <input type=\"button\" value='Reactivate' name=\"". $row['title']  . "\" v-on:click='reactivate()' style=\"margin-left:10px;color:#000;\"></li>";
                             }
                             echo "</ul>";
                         ?>
@@ -140,7 +142,8 @@
                 <footer class="footer text-center"  >
                 <div class="container">
                     <br>
-                    <p class="text-muted">Made by Peter Vreča <i class="fa fa-copyright" aria-hidden="true"></i> in 2017 using PHP, VueJS and Bootstrap.<br> Follow me on:   <a href="https://www.linkedin.com/in/peter-vre%C4%8Da-613626114/"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                    <p class="text-muted">Made by Peter Vreča <i class="fa fa-copyright" aria-hidden="true"></i> in 2017 using PHP, VueJS and Bootstrap.<br> Follow me on:
+                    <a href="https://www.linkedin.com/in/peter-vre%C4%8Da-613626114/"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
                     <a href="https://github.com/xpero39/"><i class="fa fa-github" aria-hidden="true"></i></a>
                     <a href="https://www.freecodecamp.com/xpero39"><i class="fa fa-free-code-camp" aria-hidden="true"></i></a>
                     <a href="https://twitter.com/xpero39"><i class="fa fa-twitter" aria-hidden="true"></i></a></p>
