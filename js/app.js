@@ -26,6 +26,10 @@ var app = new Vue ({
                         // Reactivate action.
                         alert("Reactivated.");
                     },
+                    checkboxUpdate: function() {
+                        //On updated Checkbox
+                        alert("Checkbox updated.");
+                    },
 
                     insert: function(section) {
                         switch (section) {

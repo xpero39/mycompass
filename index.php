@@ -39,7 +39,7 @@
                             include ('php/retrieve.php');
                             echo "<ul>";
                             while($row = $active->fetch_assoc()){
-                             echo "<li style='list-style:none inside;'>" . $row['title'] . "<input type=\"checkbox\" id=\"checkbox\" name=\"". $row['title']  . "\" style=\"margin-left:10px;\">
+                             echo "<li style='list-style:none inside;'>" . $row['title'] . "<input type=\"checkbox\" id=\"checkbox\" name=\"". $row['title']  . "\" v-on:click=\"checkboxUpdate()\" style=\"margin-left:10px;\">
                                     <input type=\"button\" value='Deactivate' name=\"". $row['title']  . "\" v-on:click='deactivate()' style=\"margin-left:10px;color:#000;\"></li>";
                             }
                             echo "</ul>";
@@ -124,7 +124,7 @@
                             include ('php/retrieve.php');
                             echo "<ul>";
                             while($row = $done->fetch_assoc()){
-                             echo "<li style='list-style:none inside;'>" . $row['title'] . "<input type=\"checkbox\" id=\"checkbox\" name=\"". $row['title']  . "\" style=\"margin-left:10px;\">
+                             echo "<li style='list-style:none inside;'>" . $row['title'] . "<input type=\"checkbox\" id=\"checkbox\" name=\"". $row['title']  . "\" v-on:click=\"checkboxUpdate()\" style=\"margin-left:10px;\">
                                     <input type=\"button\" value='Reactivate' name=\"". $row['title']  . "\" v-on:click='reactivate()' style=\"margin-left:10px;color:#000;\"></li>";
                             }
                             echo "</ul>";
