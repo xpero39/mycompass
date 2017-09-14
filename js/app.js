@@ -10,7 +10,6 @@ var app = new Vue ({
                     projects: [],
                     habits: [],
                     fears: [], */
-
                 },
                 
                 methods: {

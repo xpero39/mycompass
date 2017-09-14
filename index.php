@@ -50,10 +50,8 @@
 
                 <div class="col-xs-6 col-sm-3" id="green">
                     <h2>Learning goals</h2><br>
-                    <!--<form action="insert.php" method="post">-->
                     <input type="text" id="goalinput" name="goal" v-model="gmessage">
                     <button type="submit" id="goalButton" v-on:click="insert('goal')">Add a new goal.</button>
-                    </form>
                     <p>List your learning goals.</p><br>
                         <?php 
                             $data = "goal"; //variable in global scope!
